@@ -24,7 +24,7 @@ router.post('/', (req, res) => {
     res.status(400).json({ message: 'Deu ruim', status: 400 })
   } else {
     let sendEmail = Email.send()
-    res.status(300).json({ message: sendEmail, status: 200 })
+    res.status(200).json({ message: sendEmail, status: 200 })
   }
 })
 
