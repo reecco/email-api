@@ -20,7 +20,7 @@ router.get("/", (req, res) => {
 router.post('/', (req, res) => {
   let password = req.body.password
 
-  if (!password == passwordSys) {
+  if (!(password == passwordSys)) {
     res.status(400).json({ message: 'Deu ruim', status: 400 })
   } else {
     let sendEmail = Email.send()
