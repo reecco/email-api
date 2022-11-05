@@ -9,7 +9,7 @@ const port = process.env.PORT || 9595
 dotenv.config()
 
 app.listen(port, () => {
-  console.log(`Servidor aberto em \nhttp://localhost:${port}`)
+  console.log(`Server open in \nhttp://localhost:${port}`)
 })
 
 app.use(express.json())
