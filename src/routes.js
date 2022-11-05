@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
   let text = req.body.text
 
   if (!(password == passwordSys)) {
-    res.status(401).json({ message: 'Inválid password', status: 401 })
+    res.status(401).json({ message: 'Invalid password', status: 401 })
   } else {
     let sendEmail = await Email.send(fromEmail, title, text)
     
