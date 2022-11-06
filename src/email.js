@@ -8,7 +8,7 @@ const to = process.env.TO_EMAIL
 const from = process.env.FROM_EMAIL
 
 export default class Email {
-  static send(fromEmail, title, text) {
+  static send(fromEmail, name, text) {
     let transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 465,
@@ -22,7 +22,7 @@ export default class Email {
     let res = transporter.sendMail({
       from: `Contact Fred <${from}>`,
       to: `${to}`,
-      subject: `${title} - ${fromEmail}`,
+      subject: `${name} - ${fromEmail}`,
       html: `<p>${text}</p>`,
       text: `${text}`
     }).then((msg) => {

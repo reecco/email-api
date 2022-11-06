@@ -21,13 +21,13 @@ router.post('/', async (req, res) => {
   let password = req.body.password
 
   let fromEmail = req.body.fromEmail
-  let title = req.body.title
+  let name = req.body.name
   let text = req.body.text
 
   if (!(password == passwordSys)) {
     res.status(401).json({ message: 'Invalid password', status: 401 })
   } else {
-    let sendEmail = await Email.send(fromEmail, title, text)
+    let sendEmail = await Email.send(fromEmail, name, text)
     
     let status = sendEmail.response.replace(/ .*/, '')
 
