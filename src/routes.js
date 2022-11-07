@@ -7,7 +7,7 @@ dotenv.config()
 
 const router = expresss.Router()
 
-const passwordSys = process.env.PASSWORD
+const tokenSys = process.env.TOKEN
 
 router.get('/', (req, res) => {
   try {
@@ -18,13 +18,13 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-  let password = req.body.password
+  let token = req.body.token
 
   let email = req.body.fromEmail
   let name = req.body.name
   let text = req.body.text
 
-  if (!(password == passwordSys)) {
+  if (!(token == tokenSys)) {
     res.status(401).json({ message: 'Invalid password', status: 401 })
   } else {
     let sendEmail = await Email.send(email, name, text)
