@@ -6,6 +6,7 @@ dotenv.config()
 const pass = process.env.PASS_EMAIL
 const to = process.env.TO_EMAIL
 const from = process.env.FROM_EMAIL
+const username = process.env.USERNAME_EMAIL
 
 export default class Email {
   static send(fromEmail, name, text) {
@@ -20,7 +21,7 @@ export default class Email {
     })
 
     let res = transporter.sendMail({
-      from: `Contact Fred <${from}>`,
+      from: `${username} <${from}>`,
       to: `${to}`,
       subject: `${name} - ${fromEmail}`,
       html: `<p>${text}</p>`,
