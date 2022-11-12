@@ -1,6 +1,4 @@
-## Email API
-
-<br>
+# Email API
 
 ### Built with
 - Node.js
@@ -41,7 +39,7 @@ PASS_EMAIL= Generated pass to your gmail
 
 ### Example
 
-Assuming your sending email is contact.tommy@gmail.com and username is [Contact Tommy]()
+
 ````
 TOKEN=eSUnAEaOdRVbJn0Xp2BAPHQu5Q4oCyL9QCp8gxWW2
 PORT=3000
@@ -63,7 +61,7 @@ npm start
 You can test using Insomnia or Postman
 
 Using JSON format, see below an example of the request body
-- Use GET method for a first test
+
 - Use POST method for sending email
 
 ````json
