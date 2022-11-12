@@ -69,7 +69,7 @@ Using JSON format, see below an example of the request body
 ````json
 {
   "token": "eSUnAEaOdRVbJn0Xp2BAPHQu5Q4oCyL9QCp8gxWW2",
-  "fromEmail": "any.user@user.com",
+  "fromEmail": "fred@hotmail.com",
   "name": "Any User",
   "text": "Any message, lorem ipsum"
 }
