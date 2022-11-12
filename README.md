@@ -39,6 +39,18 @@ PASS_EMAIL= Generated pass to your gmail
 ````
 [How generate PASS_EMAIL here](./static/README.md)
 
+### Example
+
+Assuming your sending email is contact.tommy@gmail.com and username is [Contact Tommy]()
+````
+TOKEN=eSUnAEaOdRVbJn0Xp2BAPHQu5Q4oCyL9QCp8gxWW2
+PORT=3000
+TO_EMAIL=any.user@user.com
+USERNAME_EMAIL=Contact Tommy
+FROM_EMAIL=contact.tommy@gmail.com
+PASS_EMAIL=lrqrayorczvhjmpg
+````
+
 <br>
 
 ### How to test
@@ -51,12 +63,14 @@ npm start
 You can test using Insomnia or Postman
 
 Using JSON format, see below an example of the request body
+- Use GET method for a first test
+- Use POST method for sending email
 
 ````json
 {
-  "token": "Your token here",
-  "fromEmail": "User email here",
-  "name": "User name here",
-  "text": "Message here"
+  "token": "eSUnAEaOdRVbJn0Xp2BAPHQu5Q4oCyL9QCp8gxWW2",
+  "fromEmail": "any.user@user.com",
+  "name": "Any User",
+  "text": "Any message, lorem ipsum"
 }
 ````
