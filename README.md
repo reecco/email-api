@@ -30,7 +30,6 @@ Create a .env file and save this environment variables
 ````
 TOKEN= Create a any token
 PORT=3000
-TO_EMAIL= Email to send
 USERNAME_EMAIL= Username Gmail
 FROM_EMAIL= Gmail from send
 PASS_EMAIL= Generated pass to your gmail
@@ -43,7 +42,6 @@ PASS_EMAIL= Generated pass to your gmail
 ````
 TOKEN=eSUnAEaOdRVbJn0Xp2BAPHQu5Q4oCyL9QCp8gxWW2
 PORT=3000
-TO_EMAIL=any.user@user.com
 USERNAME_EMAIL=Contact Tommy
 FROM_EMAIL=contact.tommy@gmail.com
 PASS_EMAIL=lrqrayorczvhjmpg
@@ -69,6 +67,7 @@ Using JSON format, see below an example of the request body
   "token": "eSUnAEaOdRVbJn0Xp2BAPHQu5Q4oCyL9QCp8gxWW2",
   "fromEmail": "fred@hotmail.com",
   "name": "Any User",
-  "text": "Any message, lorem ipsum"
+  "text": "Any message, lorem ipsum",
+  "toEmail": "user@user.com"
 }
 ````
