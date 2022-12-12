@@ -10,7 +10,7 @@ const port = process.env.PORT || 9595
 app.use(express.json())
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://reecco.vercel.app/contact")
+  res.header("Access-Control-Allow-Origin", "*")
   res.header("Access-Control-Allow-Headers", "Content-Type,Content-Length, Authorization, Accept,X-Requested-With")
   res.header("Access-Control-Allow-Methods", 'GET,PUT,POST')
   app.use(cors())
