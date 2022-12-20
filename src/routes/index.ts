@@ -1,0 +1,14 @@
+import { Express, Request, Response, json } from 'express';
+
+import router from './routes';
+
+export default (app: Express) => {
+  app.route('/').get((req: Request, res: Response) => {
+    return res.status(200).json({ message: 'E-mail API', status: 200 });
+  });
+
+  app.use(
+    json(),
+    router
+  );
+}
