@@ -51,7 +51,7 @@ PASS_EMAIL=lrqrayorczvhjmpg
 
 To run the project, type in the terminal
 ````
-npm start
+npm run dev
 ````
 
 API endpoint
