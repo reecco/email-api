@@ -16,7 +16,7 @@ class Email {
         user: user,
         pass: pass,
       },
-    })
+    });
 
     return await transporter.sendMail({
       from: `${name} <${user}>`,
@@ -24,11 +24,8 @@ class Email {
       subject: `${name} - ${fromEmail}`,
       html: `<h3>${text}</h3>`,
       text: `${text}`
-    }).then((msg) => {
-      return msg
-    }).catch((error) => {
-      return error
-    })
+    }).then((msg) => msg)
+      .catch((error) => error);
   }
 }
 
