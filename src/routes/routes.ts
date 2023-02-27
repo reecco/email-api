@@ -5,7 +5,7 @@ import token from '../middlewares/token';
 
 const router = Router();
 
-router.post('/', token, async (req: Request, res: Response) => {
+router.post('/v2/send/email', token, async (req: Request, res: Response) => {
   const { fromEmail, toEmail, name, text } = req.body;
 
   if (!fromEmail || !toEmail || !name || !text) 
