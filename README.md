@@ -66,10 +66,14 @@ Using JSON format, see below an example of the request body
 
 ````json
 {
-  "token": "eSUnAEaOdRVbJn0Xp2BAPHQu5Q4oCyL9QCp8gxWW2",
   "fromEmail": "fred@hotmail.com",
   "toEmail": "user@user.com",
   "name": "Any User",
   "text": "Any message, lorem ipsum"
 }
+````
+
+In the authorization header, include the token
+````
+Bearer -token here-
 ````
