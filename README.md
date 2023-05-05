@@ -56,7 +56,7 @@ npm run dev
 
 API endpoint
 ````
-/v2/send/email
+/api/v2/send/email
 ````
 
 
