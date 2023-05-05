@@ -1,19 +1,14 @@
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 import { config } from "dotenv";
+
+import { TransporterMail, Mail, ResponseMail } from "../@types";
 
 config();
 
-type Mail = {
-  fromEmail: string,
-  toEmail: string,
-  name: string,
-  text: string
-};
-
 class Email {
-  user = String(process.env.USER_EMAIL);
+  private readonly user = process.env.USER_EMAIL;
 
-  private transporter() {
+  private transporter(): TransporterMail {
     const pass = process.env.PASS_EMAIL;
 
     return nodemailer.createTransport({
@@ -27,14 +22,16 @@ class Email {
     })
   }
 
-  public async send({ fromEmail, toEmail, name, text }: Mail) {
+  public async send({ fromEmail, toEmail, name, text }: Mail): Promise<ResponseMail | undefined> {
     const transporter = this.transporter();
+
+    if (!this.user)
+      return;
 
     return await transporter.sendMail({
       from: `${name} <${this.user}>`,
       to: `${toEmail}`,
       subject: `${name} - ${fromEmail}`,
-      html: `<h3>${text}</h3>`,
       text: `${text}`
     }).then(msg => msg)
       .catch(error => error);

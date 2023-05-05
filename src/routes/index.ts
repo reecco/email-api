@@ -11,6 +11,7 @@ export default (app: Express) => {
   });
 
   app.use(
+    '/api',
     json(),
     router
   );
